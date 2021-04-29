@@ -1,0 +1,31 @@
+doctype htmlexiste el nombre:
+html(lang="sp")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Pug
+    body
+        //- -var lista = ["Miguel","Jhon", "Yesid", "Marly"];
+        //- -var i=0;
+        //- //- include main.pug
+        //- //- each valor, indice in lista
+        //- //-     h1 #{indice}
+        //- while i < lista.length
+        //-     h1= lista[i++]
+
+        -var nombre = "David";
+        case nombre 
+            when 'David'
+               include Admin.pug 
+            when 'Marly'
+               include Usuario.pug
+            default 
+                b la opcion no existe  
+
+        mixin verinformacion(name)
+            h1 #{name}
+
+        +verinformacion("Soy David")
+
+
